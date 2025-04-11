@@ -1,0 +1,108 @@
+/* Dashboard.css */
+
+.game-card {
+  position: relative;
+  height: 320px;
+  width: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  background-color: #fff;
+}
+
+.game-card:hover {
+  transform: translateY(-10px);
+}
+
+.game-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+  filter: brightness(0.7);
+}
+
+.game-card:hover .game-image {
+  filter: brightness(0.55);
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 6px;
+  box-sizing: border-box;
+}
+
+.game-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.game-description {
+  font-size: 1rem;
+  opacity: 2.9;
+  color: rgb(195, 185, 192);
+}
+
+.play-button,
+.coming-soon {
+  margin-top: 10px;
+  padding: 10px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  backdrop-filter: blur(8px);
+  display: inline-block;
+  text-align: center;
+}
+
+.play-button {
+  background: linear-gradient(135deg, #087435, #64dd17);
+  color: white;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.play-button:hover {
+  background: linear-gradient(135deg, #121298, #039be5);
+}
+
+.coming-soon {
+  background-color: rgba(255, 82, 82, 0.85);
+  color: white;
+}
+/* Dashboard.css */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-image: url('https://img.freepik.com/free-vector/dark-hexagonal-background-with-gradient-color_79603-1409.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color: white;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.game-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
